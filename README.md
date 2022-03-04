@@ -11,8 +11,7 @@ GTAV and RDR2 have differents DRAW_RECT formats, then you need to adjust that
 
 RDR2 need 2 last params (bools)
 
-GTAV example:</p><p><a href=https://docs.fivem.net/natives/?_0x3A618A217E5154F0"> GTAV DRAW_RECT </a></p>
-
+GTAV example:</p> 
 
 ```C++
 void DRAW_RECT(float x, float y, float width, float height, int r, int g, int b, int a);
@@ -22,7 +21,7 @@ void DRAW_RECT(float x, float y, float width, float height, int r, int g, int b,
 
 <br >
 
-<p>RDR2 Example:</p><p><a href=https://www.rdr2mods.com/nativedb/index/graphics/draw_rect-r1353/"> RDR2 DRAW_RECT </a></p> <br > 
+<p>RDR2 Example:</p>
 
 
 ```C++
