@@ -36,3 +36,7 @@ void DRAW_RECT ( float x, float y, float width, float height, int r, int g, int 
 
 
 
+<p><a href=https://www.rdr2mods.com/nativedb/index/graphics/draw_rect-r1353/"> RDR2 DRAW_RECT </a></p> <br >
+<br >
+
+<p><a href=https://docs.fivem.net/natives/?_0x3A618A217E5154F0"> GTAV DRAW_RECT </a></p> <br >
