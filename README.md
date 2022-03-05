@@ -10,7 +10,7 @@
 <img src="https://raw.githubusercontent.com/BresoDEV/RG-Color-Menu-Layout/main/rdr.jpg?token=GHSAT0AAAAAABRAECRK4XAG6QXHQSDDCDS6YRB74JQ" alt="Trulli" width="500" height="333">
 
 <h2>GTAV Example: </h2>
-<img src="https://raw.githubusercontent.com/BresoDEV/RG-Color-Menu-Layout/main/e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg?token=GHSAT0AAAAAABRAECRLEZ4KSI2V7KR4URS4YRB74HQ" alt="Trulli" width="500" height="333"></center>
+<img src="https://raw.githubusercontent.com/BresoDEV/RG-Color-Menu-Layout/main/e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg" alt="Trulli" width="500" height="333"></center>
 
 <p>Note:
 GTAV and RDR2 have differents DRAW_RECT formats, then you need to adjust that
