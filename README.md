@@ -8,6 +8,7 @@
 
 <center><h2>RDR2 Example: </h2>
  ![Screenshot](rdr.jpg)
+ <img src="rdr.jpg" width="350" alt="accessibility text">
 
 <h2>GTAV Example: </h2>
 ![Screenshot](e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg)
