@@ -7,12 +7,10 @@
 <hr />
 
 <center><h2>RDR2 Example: </h2>
-<img src="https://raw.githubusercontent.com/BresoDEV/RG-Color-Menu-Layout/main/rdr.jpg?token=GHSAT0AAAAAABRAECRK4XAG6QXHQSDDCDS6YRB74JQ" alt="Trulli" width="500" height="333">
-  ![plot](./rdr.jpg)
+ ![Screenshot](rdr.jpg)
 
 <h2>GTAV Example: </h2>
-<img src="https://raw.githubusercontent.com/BresoDEV/RG-Color-Menu-Layout/main/e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg" alt="Trulli" width="500" height="333"></center>
-
+![Screenshot](e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg)
 <p>Note:
 GTAV and RDR2 have differents DRAW_RECT formats, then you need to adjust that
 
