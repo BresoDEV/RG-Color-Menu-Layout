@@ -7,11 +7,10 @@
 <hr />
 
 <center><h2>RDR2 Example: </h2>
- ![Screenshot](rdr.jpg)
  <img src="rdr.jpg" width="350" alt="accessibility text">
 
-<h2>GTAV Example: </h2>
-![Screenshot](e6b5ab58-237e-4511-8e1f-01e373b26a9d.jpg)
+<h2>GTAV Example: </h2> 
+  <img src="gtav.jpg" width="350" alt="accessibility text">
 <p>Note:
 GTAV and RDR2 have differents DRAW_RECT formats, then you need to adjust that
 
