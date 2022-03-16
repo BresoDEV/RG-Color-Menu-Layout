@@ -1,5 +1,8 @@
 namespace CorMenu
 {
+	//Como usar:
+	//INTS::int_5 = CorMenu::R; INTS::int_6 = CorMenu::G, INTS::int_7 = CorMenu::B; 
+	//CorMenu::DRAW_COLOR_PALLET(false, 0.5000, 0.5000, 0.230000, 0.620000);
 
 	//Variaveis que retornam as cores
 	int R, G, B;
@@ -23,15 +26,15 @@ namespace CorMenu
 	}
 
 	//Aplica as cores em variaveis diferentes desse namespace
-	void AplicarCor_emVariaveis(int novaVariavelR, int novaVariavelG, int novaVariavelB)
+	void AplicarCor_emVariaveis(int* novaVariavelR, int* novaVariavelG, int* novaVariavelB)
 	{
-		novaVariavelR = R;
-		novaVariavelG = G;
-		novaVariavelB = B;
+		novaVariavelR = &R;
+		novaVariavelG = &G;
+		novaVariavelB = &B;
 	}
 
 
-	void DRAW_COLOR_PALLET(bool precisaClicarNacorPraSelecionar, float X, float Y, float XS, float YS, int outR = 0, int outG = 0, int outB = 0)
+	void DRAW_COLOR_PALLET(bool precisaClicarNacorPraSelecionar, float X, float Y, float XS, float YS, int* outR = 0, int* outG = 0, int* outB = 0)
 	{
 
 		if (!TEXTURE::HAS_STREAMED_TEXTURE_DICT_LOADED("generic_textures"))
@@ -144,6 +147,109 @@ namespace CorMenu
 			/*76*/GRAPHICS::DRAW_RECT(X - (-0.060000), Y - (-0.24000), XS - 0.211020, YS - 0.5900000, 218, 0, 218, 255, 1);//Index 
 			/*77*/GRAPHICS::DRAW_RECT(X - (-0.090000), Y - (-0.24000), XS - 0.211020, YS - 0.5900000, 255, 0, 255, 255, 1);//Index 
 
+
+			switch (index)
+			{
+			case 1: ReturnColor(0, 0, 0); break;
+			case 2: ReturnColor(255, 0, 0); break;
+			case 3: ReturnColor(0, 255, 0); break;
+			case 4: ReturnColor(0, 0, 255); break;
+			case 5: ReturnColor(255, 255, 0); break;
+			case 6: ReturnColor(0, 255, 255); break;
+			case 7: ReturnColor(255, 0, 255); break;
+
+				//Segunda Fileira
+			case 8: ReturnColor(31, 14, 10); break;
+			case 9: ReturnColor(44, 29, 26); break;
+			case 10: ReturnColor(55, 34, 29); break;
+			case 11: ReturnColor(69, 43, 37); break;
+			case 12: ReturnColor(92, 56, 48); break;
+			case 13: ReturnColor(124, 77, 65); break;
+			case 14: ReturnColor(179, 110, 93); break;
+
+				//Terceira Fileira
+			case 15: ReturnColor(61, 44, 44); break;
+			case 16: ReturnColor(98, 70, 70); break;
+			case 17: ReturnColor(130, 93, 93); break;
+			case 18: ReturnColor(158, 113, 133); break;
+			case 19: ReturnColor(183, 128, 128); break;
+			case 20: ReturnColor(200, 150, 150); break;
+			case 21: ReturnColor(252, 177, 177); break;
+
+				//Quarta Fileira
+			case 22: ReturnColor(0, 0, 0); break;
+			case 23: ReturnColor(40, 40, 40); break;
+			case 24: ReturnColor(50, 50, 50); break;
+			case 25: ReturnColor(100, 100, 100); break;
+			case 26: ReturnColor(160, 160, 160); break;
+			case 27: ReturnColor(180, 180, 180); break;
+			case 28: ReturnColor(255, 255, 255); break;
+
+				//Quinta Fileira
+			case 29: ReturnColor(41, 71, 71); break;
+			case 30: ReturnColor(46, 100, 100); break;
+			case 31: ReturnColor(40, 120, 120); break;
+			case 32: ReturnColor(38, 140, 140); break;
+			case 33: ReturnColor(14, 170, 170); break;
+			case 34: ReturnColor(17, 214, 214); break;
+			case 35: ReturnColor(0, 255, 255); break;
+
+				//Sexta Fileira
+			case 36: ReturnColor(36, 52, 66); break;
+			case 37: ReturnColor(38, 64, 87); break;
+			case 38: ReturnColor(20, 68, 100); break;
+			case 39: ReturnColor(5, 78, 139); break;
+			case 40: ReturnColor(4, 97, 176); break;
+			case 41: ReturnColor(7, 117, 210); break;
+			case 42: ReturnColor(0, 138, 255); break;
+
+				//Setima Fileira
+			case 43: ReturnColor(0, 50, 0); break;
+			case 44: ReturnColor(0, 70, 0); break;
+			case 45: ReturnColor(0, 100, 0); break;
+			case 46: ReturnColor(0, 130, 0); break;
+			case 47: ReturnColor(0, 169, 0); break;
+			case 48: ReturnColor(0, 197, 0); break;
+			case 49: ReturnColor(0, 255, 0); break;
+
+				//Oitava Fileira
+			case 50: ReturnColor(0, 0, 50); break;
+			case 51: ReturnColor(0, 0, 70); break;
+			case 52: ReturnColor(0, 0, 98); break;
+			case 53: ReturnColor(0, 0, 127); break;
+			case 54: ReturnColor(0, 0, 170); break;
+			case 55: ReturnColor(0, 0, 200); break;
+			case 56: ReturnColor(0, 0, 255); break;
+
+				//Nonca Fileira
+			case 57: ReturnColor(50, 0, 0); break;
+			case 58: ReturnColor(70, 0, 0); break;
+			case 59: ReturnColor(98, 0, 0); break;
+			case 60: ReturnColor(127, 0, 0); break;
+			case 61: ReturnColor(170, 0, 0); break;
+			case 62: ReturnColor(200, 0, 0); break;
+			case 63: ReturnColor(255, 0, 0); break;
+
+
+				//Decima Fileira
+			case 64: ReturnColor(255, 40, 0); break;
+			case 65: ReturnColor(255, 61, 0); break;
+			case 66: ReturnColor(255, 89, 0); break;
+			case 67: ReturnColor(255, 130, 0); break;
+			case 68: ReturnColor(255, 159, 0); break;
+			case 69: ReturnColor(255, 200, 0); break;
+			case 70: ReturnColor(255, 255, 0); break;
+
+
+				//Decima primeira Fileira
+			case 71: ReturnColor(59, 0, 59); break;
+			case 72: ReturnColor(89, 0, 89); break;
+			case 73: ReturnColor(139, 0, 139); break;
+			case 74: ReturnColor(168, 0, 168); break;
+			case 75: ReturnColor(200, 0, 200); break;
+			case 76: ReturnColor(218, 0, 218); break;
+			case 77: ReturnColor(255, 0, 255); break;
+			}
 
 
 
@@ -392,6 +498,93 @@ namespace CorMenu
 						}
 						timer = 0;
 					}
+				}
+				else
+				{
+
+					switch (index)
+					{
+					case 1: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 0); break;
+					case 2: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 0); break;
+					case 3: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 0); break;
+					case 4: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 255); break;
+					case 5: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 0); break;
+					case 6: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 255); break;
+					case 7: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 255); break;
+					case 8: AplicarCor_emVariaveis(outR, outG, outB); break; //31, 14, 10); break;
+					case 9: AplicarCor_emVariaveis(outR, outG, outB); break; //44, 29, 26); break;
+					case 10: AplicarCor_emVariaveis(outR, outG, outB); break; //55, 34, 29); break;
+					case 11: AplicarCor_emVariaveis(outR, outG, outB); break; //69, 43, 37); break;
+					case 12: AplicarCor_emVariaveis(outR, outG, outB); break; //92, 56, 48); break;
+					case 13: AplicarCor_emVariaveis(outR, outG, outB); break; //124, 77, 65); break;
+					case 14: AplicarCor_emVariaveis(outR, outG, outB); break; //179, 110, 93); break;
+					case 15: AplicarCor_emVariaveis(outR, outG, outB); break; //61, 44, 44); break;
+					case 16: AplicarCor_emVariaveis(outR, outG, outB); break; //98, 70, 70); break;
+					case 17: AplicarCor_emVariaveis(outR, outG, outB); break; //130, 93, 93); break;
+					case 18: AplicarCor_emVariaveis(outR, outG, outB); break; //158, 113, 133); break;
+					case 19: AplicarCor_emVariaveis(outR, outG, outB); break; //183, 128, 128); break;
+					case 20: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 150, 150); break;
+					case 21: AplicarCor_emVariaveis(outR, outG, outB); break; //252, 177, 177); break;
+					case 22: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 0); break;
+					case 23: AplicarCor_emVariaveis(outR, outG, outB); break; //40, 40, 40); break;
+					case 24: AplicarCor_emVariaveis(outR, outG, outB); break; //50, 50, 50); break;
+					case 25: AplicarCor_emVariaveis(outR, outG, outB); break; //100, 100, 100); break;
+					case 26: AplicarCor_emVariaveis(outR, outG, outB); break; //160, 160, 160); break;
+					case 27: AplicarCor_emVariaveis(outR, outG, outB); break; //180, 180, 255); break;
+					case 28: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 255); break;
+					case 29: AplicarCor_emVariaveis(outR, outG, outB); break; //41, 71, 71); break;
+					case 30: AplicarCor_emVariaveis(outR, outG, outB); break; //46, 100, 100); break;
+					case 31: AplicarCor_emVariaveis(outR, outG, outB); break; //40, 120, 120); break;
+					case 32: AplicarCor_emVariaveis(outR, outG, outB); break; //38, 140, 140); break;
+					case 33: AplicarCor_emVariaveis(outR, outG, outB); break; //14, 170, 170); break;
+					case 34: AplicarCor_emVariaveis(outR, outG, outB); break; //17, 214, 214); break;
+					case 35: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 255); break;
+					case 36: AplicarCor_emVariaveis(outR, outG, outB); break; //36, 52, 66); break;
+					case 37: AplicarCor_emVariaveis(outR, outG, outB); break; //38, 64, 87); break;
+					case 38: AplicarCor_emVariaveis(outR, outG, outB); break; //20, 68, 100); break;
+					case 39: AplicarCor_emVariaveis(outR, outG, outB); break; //5, 78, 139); break;
+					case 40:  AplicarCor_emVariaveis(outR, outG, outB); break; //4, 97, 176); break;
+					case 41:  AplicarCor_emVariaveis(outR, outG, outB); break; //7, 117, 210); break;
+					case 42:  AplicarCor_emVariaveis(outR, outG, outB); break; //0, 138, 255); break;
+					case 43: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 50, 0); break;
+					case 44: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 70, 0); break;
+					case 45: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 100, 0); break;
+					case 46: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 130, 0); break;
+					case 47: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 169, 0); break;
+					case 48: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 197, 0); break;
+					case 49: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 0); break;
+					case 50: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 50); break;
+					case 51: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 70); break;
+					case 52: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 98); break;
+					case 53: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 127); break;
+					case 54: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 170); break;
+					case 55: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 200); break;
+					case 56: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 255); break;
+					case 57: AplicarCor_emVariaveis(outR, outG, outB); break; //50, 0, 0); break;
+					case 58: AplicarCor_emVariaveis(outR, outG, outB); break; //70, 0, 0); break;
+					case 59: AplicarCor_emVariaveis(outR, outG, outB); break; //98, 0, 0); break;
+					case 60: AplicarCor_emVariaveis(outR, outG, outB); break; //127, 0, 0); break;
+					case 61: AplicarCor_emVariaveis(outR, outG, outB); break; //170, 0, 0); break;
+					case 62: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 0, 0); break;
+					case 63: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 0); break;
+					case 64: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 40, 0); break;
+					case 65: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 61, 0); break;
+					case 66: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 89, 0); break;
+					case 67: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 130, 0); break;
+					case 68: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 159, 0); break;
+					case 69: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 200, 0); break;
+					case 70: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 0); break;
+					case 71: AplicarCor_emVariaveis(outR, outG, outB); break; //59, 0, 59); break;
+					case 72: AplicarCor_emVariaveis(outR, outG, outB); break; //89, 0, 89); break;
+					case 73: AplicarCor_emVariaveis(outR, outG, outB); break; //139, 0, 139); break;
+					case 74: AplicarCor_emVariaveis(outR, outG, outB); break; //168, 0, 168); break;
+					case 75: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 0, 200); break;
+					case 76: AplicarCor_emVariaveis(outR, outG, outB); break; //218, 0, 218); break;
+					case 77: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 255); break;
+
+					}
+					timer = 0;
+
 				}
 			}
 			else
