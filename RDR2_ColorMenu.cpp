@@ -3,6 +3,8 @@ namespace CorMenu
 	//Como usar:
 	//INTS::int_5 = CorMenu::R; INTS::int_6 = CorMenu::G, INTS::int_7 = CorMenu::B; 
 	//CorMenu::DRAW_COLOR_PALLET(false, 0.5000, 0.5000, 0.230000, 0.620000);
+	
+	 
 
 	//Variaveis que retornam as cores
 	int R, G, B;
