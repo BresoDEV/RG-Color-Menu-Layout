@@ -23,7 +23,7 @@ namespace CorMenu
 	}
 
 	//Aplica as cores em variaveis diferentes desse namespace
-	void AplicarCor_emVariaveis(int novaVariavelR, int novaVariavelG, int novaVariavelB)
+	void AplicarCor_emVariaveis(int& novaVariavelR, int& novaVariavelG, int& novaVariavelB)
 	{
 		novaVariavelR = R;
 		novaVariavelG = G;
@@ -31,7 +31,7 @@ namespace CorMenu
 	}
 
 
-	void DRAW_COLOR_PALLET(bool precisaClicarNacorPraSelecionar, float X, float Y, float XS, float YS, int outR = 0, int outG = 0, int outB = 0)
+	void DRAW_COLOR_PALLET(bool precisaClicarNacorPraSelecionar, float X, float Y, float XS, float YS, int& outR, int& outG, int& outB)
 	{
 
 		if (!GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED("CommonMenu"))
@@ -312,83 +312,83 @@ namespace CorMenu
 					{
 						switch (index)
 						{
-						case 1: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 0); break;
-						case 2: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 0); break;
-						case 3: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 0); break;
-						case 4: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 255); break;
-						case 5: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 0); break;
-						case 6: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 255); break;
-						case 7: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 255); break;
-						case 8: AplicarCor_emVariaveis(outR, outG, outB); break; //31, 14, 10); break;
-						case 9: AplicarCor_emVariaveis(outR, outG, outB); break; //44, 29, 26); break;
-						case 10: AplicarCor_emVariaveis(outR, outG, outB); break; //55, 34, 29); break;
-						case 11: AplicarCor_emVariaveis(outR, outG, outB); break; //69, 43, 37); break;
-						case 12: AplicarCor_emVariaveis(outR, outG, outB); break; //92, 56, 48); break;
-						case 13: AplicarCor_emVariaveis(outR, outG, outB); break; //124, 77, 65); break;
-						case 14: AplicarCor_emVariaveis(outR, outG, outB); break; //179, 110, 93); break;
-						case 15: AplicarCor_emVariaveis(outR, outG, outB); break; //61, 44, 44); break;
-						case 16: AplicarCor_emVariaveis(outR, outG, outB); break; //98, 70, 70); break;
-						case 17: AplicarCor_emVariaveis(outR, outG, outB); break; //130, 93, 93); break;
-						case 18: AplicarCor_emVariaveis(outR, outG, outB); break; //158, 113, 133); break;
-						case 19: AplicarCor_emVariaveis(outR, outG, outB); break; //183, 128, 128); break;
-						case 20: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 150, 150); break;
-						case 21: AplicarCor_emVariaveis(outR, outG, outB); break; //252, 177, 177); break;
-						case 22: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 0); break;
-						case 23: AplicarCor_emVariaveis(outR, outG, outB); break; //40, 40, 40); break;
-						case 24: AplicarCor_emVariaveis(outR, outG, outB); break; //50, 50, 50); break;
-						case 25: AplicarCor_emVariaveis(outR, outG, outB); break; //100, 100, 100); break;
-						case 26: AplicarCor_emVariaveis(outR, outG, outB); break; //160, 160, 160); break;
-						case 27: AplicarCor_emVariaveis(outR, outG, outB); break; //180, 180, 255); break;
-						case 28: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 255); break;
-						case 29: AplicarCor_emVariaveis(outR, outG, outB); break; //41, 71, 71); break;
-						case 30: AplicarCor_emVariaveis(outR, outG, outB); break; //46, 100, 100); break;
-						case 31: AplicarCor_emVariaveis(outR, outG, outB); break; //40, 120, 120); break;
-						case 32: AplicarCor_emVariaveis(outR, outG, outB); break; //38, 140, 140); break;
-						case 33: AplicarCor_emVariaveis(outR, outG, outB); break; //14, 170, 170); break;
-						case 34: AplicarCor_emVariaveis(outR, outG, outB); break; //17, 214, 214); break;
-						case 35: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 255); break;
-						case 36: AplicarCor_emVariaveis(outR, outG, outB); break; //36, 52, 66); break;
-						case 37: AplicarCor_emVariaveis(outR, outG, outB); break; //38, 64, 87); break;
-						case 38: AplicarCor_emVariaveis(outR, outG, outB); break; //20, 68, 100); break;
-						case 39: AplicarCor_emVariaveis(outR, outG, outB); break; //5, 78, 139); break;
-						case 40:  AplicarCor_emVariaveis(outR, outG, outB); break; //4, 97, 176); break;
-						case 41:  AplicarCor_emVariaveis(outR, outG, outB); break; //7, 117, 210); break;
-						case 42:  AplicarCor_emVariaveis(outR, outG, outB); break; //0, 138, 255); break;
-						case 43: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 50, 0); break;
-						case 44: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 70, 0); break;
-						case 45: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 100, 0); break;
-						case 46: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 130, 0); break;
-						case 47: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 169, 0); break;
-						case 48: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 197, 0); break;
-						case 49: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 255, 0); break;
-						case 50: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 50); break;
-						case 51: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 70); break;
-						case 52: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 98); break;
-						case 53: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 127); break;
-						case 54: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 170); break;
-						case 55: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 200); break;
-						case 56: AplicarCor_emVariaveis(outR, outG, outB); break; //0, 0, 255); break;
-						case 57: AplicarCor_emVariaveis(outR, outG, outB); break; //50, 0, 0); break;
-						case 58: AplicarCor_emVariaveis(outR, outG, outB); break; //70, 0, 0); break;
-						case 59: AplicarCor_emVariaveis(outR, outG, outB); break; //98, 0, 0); break;
-						case 60: AplicarCor_emVariaveis(outR, outG, outB); break; //127, 0, 0); break;
-						case 61: AplicarCor_emVariaveis(outR, outG, outB); break; //170, 0, 0); break;
-						case 62: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 0, 0); break;
-						case 63: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 0); break;
-						case 64: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 40, 0); break;
-						case 65: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 61, 0); break;
-						case 66: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 89, 0); break;
-						case 67: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 130, 0); break;
-						case 68: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 159, 0); break;
-						case 69: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 200, 0); break;
-						case 70: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 255, 0); break;
-						case 71: AplicarCor_emVariaveis(outR, outG, outB); break; //59, 0, 59); break;
-						case 72: AplicarCor_emVariaveis(outR, outG, outB); break; //89, 0, 89); break;
-						case 73: AplicarCor_emVariaveis(outR, outG, outB); break; //139, 0, 139); break;
-						case 74: AplicarCor_emVariaveis(outR, outG, outB); break; //168, 0, 168); break;
-						case 75: AplicarCor_emVariaveis(outR, outG, outB); break; //200, 0, 200); break;
-						case 76: AplicarCor_emVariaveis(outR, outG, outB); break; //218, 0, 218); break;
-						case 77: AplicarCor_emVariaveis(outR, outG, outB); break; //255, 0, 255); break;
+						case 1: outR = R; outG = G; outB = B; break; //0, 0, 0); break;
+						case 2: outR = R; outG = G; outB = B; break; //255, 0, 0); break;
+						case 3: outR = R; outG = G; outB = B; break; //0, 255, 0); break;
+						case 4: outR = R; outG = G; outB = B; break; //0, 0, 255); break;
+						case 5: outR = R; outG = G; outB = B; break; //255, 255, 0); break;
+						case 6: outR = R; outG = G; outB = B; break; //0, 255, 255); break;
+						case 7: outR = R; outG = G; outB = B; break; //255, 0, 255); break;
+						case 8: outR = R; outG = G; outB = B; break; //31, 14, 10); break;
+						case 9: outR = R; outG = G; outB = B; break; //44, 29, 26); break;
+						case 10: outR = R; outG = G; outB = B; break; //55, 34, 29); break;
+						case 11: outR = R; outG = G; outB = B; break; //69, 43, 37); break;
+						case 12: outR = R; outG = G; outB = B; break; //92, 56, 48); break;
+						case 13: outR = R; outG = G; outB = B; break; //124, 77, 65); break;
+						case 14: outR = R; outG = G; outB = B; break; //179, 110, 93); break;
+						case 15: outR = R; outG = G; outB = B; break; //61, 44, 44); break;
+						case 16: outR = R; outG = G; outB = B; break; //98, 70, 70); break;
+						case 17: outR = R; outG = G; outB = B; break; //130, 93, 93); break;
+						case 18: outR = R; outG = G; outB = B; break; //158, 113, 133); break;
+						case 19: outR = R; outG = G; outB = B; break; //183, 128, 128); break;
+						case 20: outR = R; outG = G; outB = B; break; //200, 150, 150); break;
+						case 21: outR = R; outG = G; outB = B; break; //252, 177, 177); break;
+						case 22: outR = R; outG = G; outB = B; break; //0, 0, 0); break;
+						case 23: outR = R; outG = G; outB = B; break; //40, 40, 40); break;
+						case 24: outR = R; outG = G; outB = B; break; //50, 50, 50); break;
+						case 25: outR = R; outG = G; outB = B; break; //100, 100, 100); break;
+						case 26: outR = R; outG = G; outB = B; break; //160, 160, 160); break;
+						case 27: outR = R; outG = G; outB = B; break; //180, 180, 255); break;
+						case 28: outR = R; outG = G; outB = B; break; //255, 255, 255); break;
+						case 29: outR = R; outG = G; outB = B; break; //41, 71, 71); break;
+						case 30: outR = R; outG = G; outB = B; break; //46, 100, 100); break;
+						case 31: outR = R; outG = G; outB = B; break; //40, 120, 120); break;
+						case 32: outR = R; outG = G; outB = B; break; //38, 140, 140); break;
+						case 33: outR = R; outG = G; outB = B; break; //14, 170, 170); break;
+						case 34: outR = R; outG = G; outB = B; break; //17, 214, 214); break;
+						case 35: outR = R; outG = G; outB = B; break; //0, 255, 255); break;
+						case 36: outR = R; outG = G; outB = B; break; //36, 52, 66); break;
+						case 37: outR = R; outG = G; outB = B; break; //38, 64, 87); break;
+						case 38: outR = R; outG = G; outB = B; break; //20, 68, 100); break;
+						case 39: outR = R; outG = G; outB = B; break; //5, 78, 139); break;
+						case 40: outR = R; outG = G; outB = B; break; //4, 97, 176); break;
+						case 41: outR = R; outG = G; outB = B; break; //7, 117, 210); break;
+						case 42: outR = R; outG = G; outB = B;  break; //0, 138, 255); break;
+						case 43: outR = R; outG = G; outB = B; break; //0, 50, 0); break;
+						case 44: outR = R; outG = G; outB = B; break; //0, 70, 0); break;
+						case 45: outR = R; outG = G; outB = B; break; //0, 100, 0); break;
+						case 46: outR = R; outG = G; outB = B; break; //0, 130, 0); break;
+						case 47: outR = R; outG = G; outB = B; break; //0, 169, 0); break;
+						case 48: outR = R; outG = G; outB = B; break; //0, 197, 0); break;
+						case 49: outR = R; outG = G; outB = B; break; //0, 255, 0); break;
+						case 50: outR = R; outG = G; outB = B; break; //0, 0, 50); break;
+						case 51: outR = R; outG = G; outB = B; break; //0, 0, 70); break;
+						case 52: outR = R; outG = G; outB = B; break; //0, 0, 98); break;
+						case 53: outR = R; outG = G; outB = B; break; //0, 0, 127); break;
+						case 54: outR = R; outG = G; outB = B; break; //0, 0, 170); break;
+						case 55: outR = R; outG = G; outB = B; break; //0, 0, 200); break;
+						case 56: outR = R; outG = G; outB = B; break; //0, 0, 255); break;
+						case 57: outR = R; outG = G; outB = B; break; //50, 0, 0); break;
+						case 58: outR = R; outG = G; outB = B; break; //70, 0, 0); break;
+						case 59: outR = R; outG = G; outB = B; break; //98, 0, 0); break;
+						case 60: outR = R; outG = G; outB = B; break; //127, 0, 0); break;
+						case 61: outR = R; outG = G; outB = B; break; //170, 0, 0); break;
+						case 62: outR = R; outG = G; outB = B; break; //200, 0, 0); break;
+						case 63: outR = R; outG = G; outB = B; break; //255, 0, 0); break;
+						case 64: outR = R; outG = G; outB = B; break; //255, 40, 0); break;
+						case 65: outR = R; outG = G; outB = B; break; //255, 61, 0); break;
+						case 66: outR = R; outG = G; outB = B; break; //255, 89, 0); break;
+						case 67: outR = R; outG = G; outB = B; break; //255, 130, 0); break;
+						case 68: outR = R; outG = G; outB = B; break; //255, 159, 0); break;
+						case 69: outR = R; outG = G; outB = B; break; //255, 200, 0); break;
+						case 70: outR = R; outG = G; outB = B; break; //255, 255, 0); break;
+						case 71: outR = R; outG = G; outB = B; break; //59, 0, 59); break;
+						case 72: outR = R; outG = G; outB = B; break; //89, 0, 89); break;
+						case 73: outR = R; outG = G; outB = B; break; //139, 0, 139); break;
+						case 74: outR = R; outG = G; outB = B; break; //168, 0, 168); break;
+						case 75: outR = R; outG = G; outB = B; break; //200, 0, 200); break;
+						case 76: outR = R; outG = G; outB = B; break; //218, 0, 218); break;
+						case 77: outR = R; outG = G; outB = B; break; //255, 0, 255); break;
 
 						}
 						timer = 0;
